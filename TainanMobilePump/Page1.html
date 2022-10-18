@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <base target="_top">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        th{
+        color:black;
+        font-size: 80%;
+    }
+        td{
+        color:black;
+        font-size: 80%;
+    }
+
+        table.returnTable{
+	      width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+        .returnTable th{
+        text-align: center;
+        vertical-align:middle;
+    }   
+
+    </style>
+
+
+
+  </head>
+  <body>
+    <title>回報成果</title>
+
+    <? var data = getData(); ?>
+    <table class="returnTable" border="1">
+      <tr style="visibility: hidden;">
+      	<td width="8%">
+      	<td width="12%">     
+      	<td width="16%">      	
+      	<td width="8%">     
+      	<td width="8%">
+        <td width="8%">
+        <td width="5%">
+        <td width="12%">
+        <td width="4%">
+        <td width="5%">
+
+       <? for (var i = 0; i < data.length; i++) { ?>
+       <tr>
+         <? for (var j = 0; j < data[i].length; j++) { ?>
+     <td>
+       <?= data[i][j] ?>
+       </td>
+       <? } ?>
+       </tr>
+        <? } ?>
+    </table> 
+
+
+
+  </body>
+</html>
